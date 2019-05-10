@@ -7,10 +7,13 @@ Welcome to building LibBSD for RTEMS using Waf. This package is a library contai
 
 The following instructions show you how to build and install RTEMS Tools and RTEMS kernel for your BSP in separate paths. The Waf build support for RTEMS requires you provide your BSP name as an architecture and BSP pair. 
 
-We will build an Xilinx Zynq QEMU BSP using the name arm/xilinx_zynq_a9_qemu.
+We will build an Xilinx Zynq QEMU BSP using the arm/xilinx_zynq_a9_qemu.
 
 <b>1. Create a sandbox directory</b>
-```
+
+{% highlight c %}
+
 $ sandbox="$PWD/sandbox"
 $ mkdir sandbox
-```
+
+{% endhighlight %}
