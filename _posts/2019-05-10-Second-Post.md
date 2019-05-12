@@ -11,11 +11,8 @@ We will build an Xilinx Zynq QEMU BSP using the arm/xilinx_zynq_a9_qemu.
 
 ## 1. Create a sandbox directory ##
 
-```
-
 $ sandbox="$PWD/sandbox"
 $ mkdir sandbox
-```
 
 ## 2. Clone the repositories: ##
 
