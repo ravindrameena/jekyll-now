@@ -18,7 +18,7 @@ $ mkdir sandbox
 
 {% endhighlight %}
 
-** 2. Clone the repositories: **
+## 2. Clone the repositories: ##
 
 {% highlight c %}
 
