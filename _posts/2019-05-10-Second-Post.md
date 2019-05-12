@@ -9,7 +9,7 @@ The following instructions show you how to build and install RTEMS Tools and RTE
 
 We will build an Xilinx Zynq QEMU BSP using the arm/xilinx_zynq_a9_qemu.
 
-1. Create a sandbox directory
+** 1. Create a sandbox directory **
 
 {% highlight c %}
 
@@ -18,7 +18,7 @@ $ mkdir sandbox
 
 {% endhighlight %}
 
-2. Clone the repositories:
+** 2. Clone the repositories: **
 
 {% highlight c %}
 
@@ -29,7 +29,7 @@ $ git clone git://git.rtems.org/rtems-libbsd.git
 
 {% endhighlight %}
 
-3. Build and install the tools:
+** 3. Build and install the tools: **
 
 {% highlight c %}
 
@@ -161,3 +161,7 @@ TLNT [/] #
 {% endhighlight %} 
 
 If you get the above output "Connected 169.254.159.156" then you have successfully connected the host to the target.
+
+# References
+
+https://github.com/RTEMS/rtems-libbsd
