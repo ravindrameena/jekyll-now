@@ -10,9 +10,10 @@ The following instructions show you how to build and install RTEMS Tools and RTE
 We will build an Xilinx Zynq QEMU BSP using the arm/xilinx_zynq_a9_qemu.
 
 ## 1. Create a sandbox directory ##
+
 ```bash
-$ sandbox="$PWD/sandbox"
-$ mkdir sandbox
+ $ sandbox="$PWD/sandbox"
+ $ mkdir sandb
 ```
 
 ## 2. Clone the repositories: ##
