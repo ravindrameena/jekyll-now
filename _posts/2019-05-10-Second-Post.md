@@ -11,22 +11,25 @@ We will build an Xilinx Zynq QEMU BSP using the arm/xilinx_zynq_a9_qemu.
 
 ## 1. Create a sandbox directory ##
 
-```bash
+{% highlight c %}
+
  $ sandbox="$PWD/sandbox"
  $ mkdir sandb
-```
+
+{% endhighlight %}
 
 ## 2. Clone the repositories: ##
 
-```
+{% highlight c %}
 
 $ cd "$sandbox"
 $ git clone git://git.rtems.org/rtems-source-builder.git
 $ git clone git://git.rtems.org/rtems.git
 $ git clone git://git.rtems.org/rtems-libbsd.git
-```
 
-** 3. Build and install the tools: **
+{% endhighlight %}
+
+## 3. Build and install the tools: ##
 
 {% highlight c %}
 
@@ -36,7 +39,7 @@ $ ../source-builder/sb-set-builder --prefix="$sandbox/rtems/5" 5/rtems-arm
 
 {% endhighlight %}
 
-4. Bootstrap the RTEMS sources:
+## 4. Bootstrap the RTEMS sources: ##
 
 {% highlight c %}
 
@@ -46,7 +49,7 @@ $ PATH="$sandbox/rtems/5/bin:$PATH" ./bootstrap
 
 {% endhighlight %}
 
-5. Build and install the RTEMS Board Support Packages (BSP) you want to use:
+## 5. Build and install the RTEMS Board Support Packages (BSP) you want to use: ##
 
 {% highlight c %}
 
@@ -56,7 +59,7 @@ $ PATH="$sandbox/rtems/5/bin:$PATH" ./bootstrap
 
 {% endhighlight %}
 
-6. Populate the rtems_waf git submodule. Note, make sure you specify 'rtems_waf' or the FreeBSD kernel source will be cloned:
+## 6. Populate the rtems_waf git submodule. Note, make sure you specify 'rtems_waf' or the FreeBSD kernel source will be cloned: ##
 
 {% highlight c %}
 
@@ -67,7 +70,7 @@ $ git submodule update rtems_waf
 
 {% endhighlight %}
 
-7. Run Waf's configure with your specific settings. In this case the path to the tools and RTEMS are provided on the command line and so do not need to be in your path or environment. You can use '--rtems-archs=arm,sparc,i386' or '--rtems-bsps=arm/xilinx_zynq_a9_qemu,sparc/sis,i386/pc586' to build for more than BSP at a time.
+## 7. Run Waf's configure with your specific settings. In this case the path to the tools and RTEMS are provided on the command line and so do not need to be in your path or environment. You can use '--rtems-archs=arm,sparc,i386' or '--rtems-bsps=arm/xilinx_zynq_a9_qemu,sparc/sis,i386/pc586' to build for more than BSP at a time. ##
 
 {% highlight c %}
 
@@ -79,7 +82,7 @@ $ ./waf configure --prefix="$sandbox/rtems/5" \
 
 {% endhighlight %}
 
-8. Build and install:
+## 8. Build and install: ##
 
 {% highlight c %}
 
@@ -90,7 +93,7 @@ $ ./waf install
 
 {% endhighlight %}  
 
-9. Run the tests on QEMU, for example:
+## 9. Run the tests on QEMU, for example: ##
 
 {% highlight c %}
 
@@ -161,4 +164,4 @@ If you get the above output "Connected 169.254.159.156" then you have successful
 
 # References
 
-https://github.com/RTEMS/rtems-libbsd
+[1] https://github.com/RTEMS/rtems-libbsd
