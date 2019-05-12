@@ -164,4 +164,4 @@ If you get the above output "Connected 169.254.159.156" then you have successful
 
 # References
 
-[https://github.com/RTEMS/rtems-libbsd]
+(https://github.com/RTEMS/rtems-libbsd)
