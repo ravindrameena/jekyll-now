@@ -43,7 +43,7 @@ Step 3: This requires to TAP virtual Ethernet interface for this:
 
 After some seconds it will acquire a IPv4 link-local address, e.g.
 
-{% endhighlight %}
+{% highlight c %}
 
   info: cgem0: probing for an IPv4LL address
   debug: cgem0: checking for 169.254.XXX.XXX
@@ -61,7 +61,7 @@ Use telnet command to connect host to target.
 Step 4: After successfully connected to the target, we can get event records
 item  from QEMU target text format by using the following commands:
 
-{% endhighlight %}
+{% highlight c %}
 
   cd rtems-tools
   ./build/misc/rtems-record -H 169.254.XXX.XXX -p 1234 | head
