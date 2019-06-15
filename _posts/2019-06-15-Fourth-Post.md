@@ -11,7 +11,7 @@ Step 1: Clone the following repositories and set up the development environment
 {% highlight c %}
 
 $ cd "$sandbox"
-$ git clone https://github.com/rmeena840/rtems-libbsd/tree/ravindra-rtems>
+$ git clone https://github.com/rmeena840/rtems-libbsd/tree/ravindra-rtems
 $ git clone https://github.com/rmeena840/rtems-tools/tree/ravindra-rtems
 
 {% endhighlight %}
