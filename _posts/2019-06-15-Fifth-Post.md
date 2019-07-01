@@ -1,6 +1,6 @@
 ---
 layout: post
-title: RTEMS Trace Item Generation Example
+title: RTEMS record Item Generation Example
 ---
 
 This post will guide you through how to generate RTEMS record item from and send it back to
