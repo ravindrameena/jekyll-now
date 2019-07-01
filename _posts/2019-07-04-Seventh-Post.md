@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why is CTF important and what it's structure looks like?
+title: Why is CTF important and how it's structure looks like?
 ---
 
 With CTF, all headers, contexts, and event fields written in binary files are 
