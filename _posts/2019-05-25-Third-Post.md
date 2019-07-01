@@ -3,15 +3,10 @@ layout: post
 title: POSIX Compliance (Getting started challenge for RTEMS beginners) 
 ---
 
-POSIX stands for Portable Operating System Interface for uni-X. POSIX Compliance allows us to 
-port the source code that is running on one machine, can be run on another machine. This 
-Project deals with the implementation of a subset of functions that are defined in POSIX 
-1003_1 standard, Due to physical resource constraints, some real-time systems like the small 
-embedded system needs a limited set of operating system functionality. For these type of 
-system, it is necessary that the standards allow the implementation to support only a 
-particular subset of POSIX functions. Real-Time Working Group addressed this subset of 
-function.POSIX profiles defined in FACE Technical Standards, designed for avionics system 
-versus POSIX in RTEMS where some functions are missing.
+POSIX stands for Portable Operating System Interface for uni-X. POSIX Compliance allows us to port the source code that is running on one machine, can be run on another machine.
+ 
+This Project deals with the implementation of a subset of functions that are 
+defined in POSIX 1003_1 standard, Due to physical resource constraints, some real-time systems like the small embedded system needs a limited set of operating system functionality. For these type of system, it is necessary that the standards allow the implementation to support only a particular subset of POSIX functions. Real-Time Working Group addressed this subset of function.POSIX profiles defined in FACE Technical Standards, designed for avionics system versus POSIX in RTEMS where some functions are missing.
 
 RTEMS Initial Setup:
 
