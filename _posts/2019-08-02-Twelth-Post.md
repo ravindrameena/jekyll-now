@@ -26,9 +26,13 @@ Support for libpcap traces (the format used by Wireshark) was added this way.
 **Benefits of Trace Compass:**
 
 **1.)** Reduce time to identify faults
+
 **2.)** Observe multi-core, heterogeneous, virtualized, and distributed systems
+
 **3.)** Use the same analysis tool for development, testing, and production
+
 **4.)** Extend the framework to fit the needs of your organization
+
 **5.)** Avoid vendor lock-in by using an open source solution
 
 # References
