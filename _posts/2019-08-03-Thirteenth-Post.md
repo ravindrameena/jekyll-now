@@ -285,6 +285,8 @@ event {
 
 {% endhighlight %}
 
+Once metadata for native trace is ready. Import it in Trace Compass software for anlysis.
+
 # References
 
 [Trace Compass](https://www.eclipse.org/tracecompass/)
