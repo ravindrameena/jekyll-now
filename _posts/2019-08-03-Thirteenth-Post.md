@@ -160,3 +160,15 @@ event {
 };
 
 {% endhighlight %}
+
+# References
+
+[Trace Compass](https://www.eclipse.org/tracecompass/)
+
+[LTTng](https://lttng.org/docs/v2.10/)
+
+[babeltrace](http://diamon.org/babeltrace/)
+
+[CTF](http://diamon.org/ctf/#ctf-in-a-nutshell)
+
+[rtems-tools](https://github.com/rmeena840/rtems-tools/tree/ravindra-rtems)
