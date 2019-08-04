@@ -1,6 +1,6 @@
 ---
 layout: post
-title: What is sched_switch in metadata?
+title: What is sched_switch event in metadata?
 ---
 
 sched_switch event defined in the metadata helps to identify if the thread is running or idle
@@ -62,3 +62,15 @@ If thread API returns 1 then it means it is idle thread.
 
 If above condtion returns 1 then it is idle thread. For idle thread _prev_tid of sched_switch
 value is 0.
+
+# References
+
+[Trace Compass](https://www.eclipse.org/tracecompass/)
+
+[LTTng](https://lttng.org/docs/v2.10/)
+
+[babeltrace](http://diamon.org/babeltrace/)
+
+[CTF](http://diamon.org/ctf/#ctf-in-a-nutshell)
+
+[rtems-tools](https://github.com/rmeena840/rtems-tools/tree/ravindra-rtems)
