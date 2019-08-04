@@ -3,8 +3,7 @@ layout: post
 title: How to install Trace Compass and import trace in Trace Compass?
 ---
 
-Follow the instruction given on [Trace Compass](https://www.eclipse.org/tracecompass/)
-to install Java JDK and Trace Compass dependencies.
+Follow the instruction given on [Trace Compass](https://github.com/tuxology/tracevizlab/tree/master/labs/006-installing-tracecompass) to install Java JDK and Trace Compass dependencies.
 
 After the successfull set up of Trace Compass. We can now import trace in Trace Compass.
 
