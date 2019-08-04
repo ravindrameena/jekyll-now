@@ -56,7 +56,7 @@ If thread API returns 1 then it means it is idle thread.
 
 {% highlight c %}
 
-( ( ( item->data >> 24 ) & 0x7 ) == 1 )
+( ( ( thread_id >> 24 ) & 0x7 ) == 1 )
 
 {% endhighlight %}
 
