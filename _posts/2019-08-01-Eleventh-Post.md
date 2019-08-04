@@ -9,11 +9,16 @@ simultaneously trace the Linux kernel, user applications, and user libraries.
 LTTng consists of:
 
 1.) Kernel modules to trace the Linux kernel.
+
 2.) Shared libraries to trace user applications written in C or C++.
+
 3.) Java packages to trace Java applications which use java.util.logging or Apache log4j 1.2.
+
 4.) A Python package to trace Python applications which use the standard logging package
+
 5.) A kernel module to trace shell scripts and other user applications without a dedicated 
 instrumentation mechanism.
+
 6.) Daemons and a command-line tool, lttng, to control the LTTng tracers.
 
 The main distinctive features of LTTng is that it produces correlated kernel and user space traces, 
