@@ -9,6 +9,7 @@ events but now Trace Compass can also read the events. So both babeltrace
 and Trace Compass can read the events.
 
 What was done in phase 2:
+
 **1.)** Produced metadata in LTTng format.
 
 **2.)** Got Trace Compass read the events.
