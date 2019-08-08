@@ -5,10 +5,10 @@ title: GSoC 2019 Final Report
 
 ![_config.yml]({{ https://rmeena840.github.io/ }}/images/rtems.png)
 
-This report summarizes the work that I have done during Google Summer of Code 2019 period and what
-is left to do.
+This report summarizes the work that I have done during Google Summer of Code 2019 period 
+and what is left to do.
 
-# Contact Information
+# Contact Information:
 
 **Name:** Ravindra Kumar Meena
 
@@ -18,16 +18,19 @@ is left to do.
 
 **Email:** rmeena840@gmail.com
 
-# GSoC 2019 Project
+# Project details:
 
-**Project title:** Basic Support for Trace Compass (ticket: #3696)
+**Project title:** Basic Support for Trace Compass (ticket: [#3696](https://devel.rtems.org/ticket/3696))
 
 **Proposal link:** [Here](https://docs.google.com/document/d/
 1G6ISV_vIYLKl5Em2lwF8W91YrHWkve2KRSPOolerjTg/edit)
 
-**Weekly Updates:** (https://devel.rtems.org/wiki/GSoC/2019#RavindraKumarMeena)
+**Weekly Updates:** [Here](https://devel.rtems.org/wiki/GSoC/2019#RavindraKumarMeena)
 
-# Project Overview
+**GitHub Repository:** [rtems-tools](https://github.com/rmeena840/rtems-tools/tree/ravindra-rtems), 
+[rtems-docs](https://github.com/rmeena840/rtems-docs/tree/ravindra-rtems)
+
+# Project Abstract:
 
 The goal of this project is to enable the Trace Compass to analyze and display some basic 
 information using Event Recording infrastructure. Trace Compass is a software for viewing and 
@@ -35,7 +38,7 @@ analyzing any type of logs or traces. The basic information to analyze and displ
 include CPU usage, IRQ analysis(IRQ Statistics, IRQ Table, IRQ vs Count, IRQ vs Time), Linux Kernel
 (Control Flow, Resources) etc.
 
-# Mentors
+# Mentors:
 
 **\*** Sebastian Huber
 
@@ -43,7 +46,7 @@ include CPU usage, IRQ analysis(IRQ Statistics, IRQ Table, IRQ vs Count, IRQ vs 
 
 **\*** Chris Johns
 
-# Project Objectives
+# Project Objectives:
 
 There are three main objectives of the project:
 
