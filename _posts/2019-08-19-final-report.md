@@ -57,4 +57,8 @@ There are three main objectives of the project:
 **3.)** Add the sched_switch event in both LTTng metadata and client-side so that
 Trace Compass can display both CPU usage and resources graph.
 
+# What was done:
+
+## During GSoC Phase 1:
+
 
