@@ -34,6 +34,8 @@ and what is left to do.
 **GitHub Repository:** [rtems-tools](https://github.com/rmeena840/rtems-tools/tree/ravindra-rtems), 
 [rtems-docs](https://github.com/rmeena840/rtems-docs/tree/ravindra-rtems)
 
+**GSoC blog:** [Blog link](https://rmeena840.github.io/final-report/)
+
 # Mentors:
 
 **\*** Sebastian Huber
