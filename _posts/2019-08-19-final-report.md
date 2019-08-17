@@ -143,7 +143,7 @@ can also display the thread names. The client-side program can now generate LTTn
 
 # Overall rebased work on GitHub:
 
-[Recording Infrastructure rebased work](https://github.com/rmeena840/rtems-tools/commit/
+(https://github.com/rmeena840/rtems-tools/commit/
 27fa73cf5a7bafbb1ad45b48fb54b4658f868f3b)
 
 This rebased commit contains the overall work done in phases 1, 2 and 3.
