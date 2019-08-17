@@ -141,9 +141,9 @@ state of the project. [Patch Link](https://github.com/rmeena840/rtems-docs/commi
 **Main Outcome of Phase 3:** The Trace Compass can now display the thread state(IDLE/RUNNING). It 
 can also display the thread names. The client-side program can now generate LTTng metadata.
 
-# Overall rebased work on GitHub:
+## Overall rebased work on GitHub:
 
-(https://github.com/rmeena840/rtems-tools/commit/
+[GitHub workplace Link](https://github.com/rmeena840/rtems-tools/commit/
 27fa73cf5a7bafbb1ad45b48fb54b4658f868f3b)
 
 This rebased commit contains the overall work done in phases 1, 2 and 3.
