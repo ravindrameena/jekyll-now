@@ -75,9 +75,9 @@ host which is not in LTTng format.
 ![_config.yml]({{ https://rmeena840.github.io/ }}/images/event-recording-trace.png)
 
 On successfully getting host connected to the target. The target produces the TCP streams to the 
-host which is converted into LTTng trace on the host side. The Trace Compass and babeltrace are two 
+host which is converted into LTTng format on the host's side. The Trace Compass and babeltrace are two 
 software that can read the LTTng trace. The babeltrace can only print the LTTng trace whereas, 
-Trace Compass can also display CPU usage and resources.
+Trace Compass can display CPU usage and resources.
 
 # What was done in three GSoC phases:
 
@@ -94,31 +94,30 @@ from RTEMS target.
 
 ## During GSoC Phase 2:
 
-**1.)** Modified the rtems-record-lttng tool program to read from a file if a –input= command-line option is given so that the rtems-record-lttng tool program can read from a file input given.
+**1.)** Modified the rtems-record-lttng tool program to read from a file if a –input= command-line option is given so that the rtems-record-lttng tool program can read from a given file input.
 
 **2.)** Produced LTTng metadata. In these LTTng components like packet.header, packet.context etc were added.
 
 **3.)** Modified rtems-record-lttng tool program to produce trace from RTEMS target which is compatible with LTTng metadata. 
 
-**4.)** Added sched_switch event in both rtems-record-lttng tool and LTTng metadata. This event helps in visualization of CPU usage and resources in Trace Compass.
+**4.)** Added LTTng sched_switch event in both rtems-record-lttng tool and LTTng metadata. This event helps in visualization of CPU usage and resources in Trace Compass.
 
-**Main Outcome of Phase 2:** The Client-side program now has support to read from a file if –input= 
-command-line option is given. Earlier only babeltrace was able to read the event stream but now 
-Trace Compass can also read event stream values. The Trace Compass can also display the CPU usage 
+**Main Outcome of Phase 2:** The rtems-record-lttng tool program now has support to read from a file if –input= command-line option is given. Earlier only babeltrace was able to read the event stream but now 
+Trace Compass can also read event stream values. The Trace Compass can also display the CPU Usage 
 and resources.
 
 ## During GSoC Phase 3:
 
-**1.)** Stored thread id and thread name in a table. Thread id and thread name were stored in a table so that the table can be used later in the sched_switch event. With the help of this thread can have name.
+**1.)** Stored thread id and thread name in a table so that the table can be used later in the LTTng sched_switch event. With the help of the table, the thread's can have a name.
 
-**2.)** Populated the thread id and thread name table to sched_switch event in the rtems-record-lttng tool so that thread can have the name. 
+**2.)** Populated the thread id and thread name table to LTTng sched_switch event in the rtems-record-lttng tool so that thread's can have the name. 
 
 **3.)** Generated metadata from the rtems-record-lttng tool.
 
 **Main Outcome of Phase 3:** The Trace Compass can now display the thread state (IDLE/RUNNING) 
-and thread names. The client-side program can now generate LTTng metadata.
+and thread names. The rtems-record-lttng tool program can now generate LTTng metadata.
 
-## Trace Compass CPU usage and resource snapshot:
+## Trace Compass Trace Visualization snapshot:
 
 ![_config.yml]({{ https://rmeena840.github.io/ }}/images/Trace-Compass.png)
 
@@ -135,13 +134,13 @@ The above snapshot shows the CPU usage and resource graph with thread names.
 The above patch is for LTTng sched_switch support. This single patch comprises the work done phase 1/2/3. The patch got merged!
 
 ## Document contribution:
-[LTTng sched_switch support documentation patch](https://git.rtems.org/rtems-tools/commit/?id=ba6b8af8bbd0120d0c4d77de54f2eb909a6081ea)
+[LTTng sched_switch support documentation patch](https://github.com/rmeena840/rtems-docs/commit/6230eaf0d0f9f4968558c434bbc99459008049e8)
 
 The above patch is for rtems-docs event recording section. This contains the example and steps to convert the trace from RTEMS target into LTTng format.
 
 # What is left – Bugs and Further Enhancements
 
-**\*** The output command line feature can be added to the client-side program. With this, the 
+**\*** The output command line feature can be added to the rtems-record-lttng tool program. With this, the 
 traces and metadata can be generated in a particular folder.
 
 **\*** There is no IRQ support yet.
