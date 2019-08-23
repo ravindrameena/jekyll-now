@@ -5,14 +5,11 @@ title: GSoC 2019 Final Report
 
 ![_config.yml]({{ https://rmeena840.github.io/ }}/images/rtems.png)
 
-This report summarizes the work that I have done during Google Summer of Code 2019 period 
-and what is left to do.
+This report summarizes the work that I have done during Google Summer of Code 2019.
 
 # Contact Information:
 
 **Name:** Ravindra Kumar Meena
-
-**University:** Indian Institute of Technology (ISM), Dhanbad
 
 **IRC nickname:** rmeena840
 
@@ -64,8 +61,7 @@ There are three main objectives of the project:
 **2.)** Write the LTTng metadata for the event stream per CPU stored on the host's
 disk.
 
-**3.)** Add the sched_switch event in both LTTng metadata and client-side so that
-Trace Compass can display both CPU usage and resources graph.
+**3.)** Add the sched_switch event in both LTTng metadata and rtems-record-lttng tool so that Trace Compass can display both CPU Usage and resources graph.
 
 # GSoC project previous state:
 
@@ -81,7 +77,7 @@ host which is not in LTTng format.
 On successfully getting host connected to the target. The target produces the TCP streams to the 
 host which is converted into LTTng trace on the host side. The Trace Compass and babeltrace are two 
 software that can read the LTTng trace. The babeltrace can only print the LTTng trace whereas, 
-Trace Compass can display CPU usage and resources.
+Trace Compass can also display CPU usage and resources.
 
 # What was done in three GSoC phases:
 
@@ -89,33 +85,22 @@ The GSoC project was divided into three phases.
 
 ## During GSoC Phase 1:
 
-**1.)** Patch ( for rtems-docs, tracing section ) for trace generation example from RTEMS target. This 
-patch was on the basis of the current state of the project. [Patch-link](https://github.com/rmeena840/rtems-docs/commit/73aaf8ab381a2794fbf2fc0098896696c74b6819)
+**1.)** Write record items generated from RTEMS target on the host’s disk.
 
-**2.)** Writing record items from RTEMS target in a file stored on the host’s disk.
-
-**3.)** Wrote metadata which is compatible with generated event stream from RTEMS target.
+**2.)** Write metadata compatible with generated event streams from the RTEMS target.
 
 **Main Outcome of Phase 1:** The babeltrace can read and print the event streams generated 
 from RTEMS target.
 
 ## During GSoC Phase 2:
 
-**1.)** Recorded a raw record item stream produced by the Qemu target via the nc tool in a file 
-(not more than 100KiB) and add this file to rtems-tools.
+**1.)** Modified the rtems-record-lttng tool program to read from a file if a –input= command-line option is given so that the rtems-record-lttng tool program can read from a file input given.
 
-**2.)** Modified the client-side program to read from a file if a –input= command-line option is 
-given.
+**2.)** Produced LTTng metadata. In these LTTng components like packet.header, packet.context etc were added.
 
-**3.)** Open event stream files for each processor and write events of CPU to the corresponding 
-file opened for each CPU.
+**3.)** Modified rtems-record-lttng tool program to produce trace from RTEMS target which is compatible with LTTng metadata. 
 
-**4.)** Produced LTTng metadata. In these LTTng components like packet.header, packet.context etc 
-were added. 
-
-**5.)** Modified client-side program which is compatible with LTTng metadata.
-
-**6.)** Added sched_switch in both client-side and LTTng metadata.
+**4.)** Added sched_switch event in both rtems-record-lttng tool and LTTng metadata. This event helps in visualization of CPU usage and resources in Trace Compass.
 
 **Main Outcome of Phase 2:** The Client-side program now has support to read from a file if –input= 
 command-line option is given. Earlier only babeltrace was able to read the event stream but now 
@@ -124,18 +109,11 @@ and resources.
 
 ## During GSoC Phase 3:
 
-**1.)** Detected the IDLE/RUNNING state of thread and set the value according to the thread state
-(IDLE/ RUNNING).
+**1.)** Stored thread id and thread name in a table. Thread id and thread name were stored in a table so that the table can be used later in the sched_switch event. With the help of this thread can have name.
 
-**2.)** Retrieved thread id and thread names from RTEMS target and stored in the table. 
+**2.)** Populated the thread id and thread name table to sched_switch event in the rtems-record-lttng tool so that thread can have the name. 
 
-**3.)** Populated the table to sched_switch event in the client-side so that thread can have the 
-name.
-
-**4.)** Generated metadata from the client-side.
-
-**5.)** Produced documentation patch. This documentation patch was on the basis of the final 
-stage of the project. [Patch Link](https://github.com/rmeena840/rtems-docs/commit/cbad5f2cd4905cb9d3312cd4ccce222bad8fbaee)
+**3.)** Generated metadata from the rtems-record-lttng tool.
 
 **Main Outcome of Phase 3:** The Trace Compass can now display the thread state (IDLE/RUNNING) 
 and thread names. The client-side program can now generate LTTng metadata.
@@ -144,14 +122,22 @@ and thread names. The client-side program can now generate LTTng metadata.
 
 ![_config.yml]({{ https://rmeena840.github.io/ }}/images/Trace-Compass.png)
 
-The above snapshot shows the CPU usage and resources graph. It is also
-displays the thread names.
+The above Trace Compass visualization is generated from raw data available at:
+[raw-data](https://github.com/rmeena840/rtems-tools/commit/ba268380984e63d9f58ef8054d1a2542091f19ec)
 
-## Merged patch
-[rtems-tools](https://git.rtems.org/rtems-tools/commit/?id=ba6b8af8bbd0120d0c4d77de54f2eb909a6081ea)
+It is an event record stream with 24 CPUs so that the user can test the event stream file per CPU. It was tested on Linux Fedora 30.
 
-The above patch got merged into rtems-tools master branch. This patch contains the overall 
-coding work done in phases 1, 2 and 3.
+The above snapshot shows the CPU usage and resource graph with thread names.
+
+## Code contribution:
+[LTTng sched_switch support patch](https://git.rtems.org/rtems-tools/commit/?id=ba6b8af8bbd0120d0c4d77de54f2eb909a6081ea)
+
+The above patch is for LTTng sched_switch support. This single patch comprises the work done phase 1/2/3. The patch got merged!
+
+## Document contribution:
+[LTTng sched_switch support documentation patch](https://git.rtems.org/rtems-tools/commit/?id=ba6b8af8bbd0120d0c4d77de54f2eb909a6081ea)
+
+The above patch is for rtems-docs event recording section. This contains the example and steps to convert the trace from RTEMS target into LTTng format.
 
 # What is left – Bugs and Further Enhancements
 
