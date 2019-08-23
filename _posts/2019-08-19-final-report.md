@@ -133,7 +133,7 @@ The above snapshot shows the CPU usage and resource graph with thread names.
 
 The above patch is for LTTng sched_switch support. This single patch comprises the work done phase 1/2/3. The patch got merged!
 
-## Document contribution:
+## Documentation contribution:
 [LTTng sched_switch support documentation patch](https://github.com/rmeena840/rtems-docs/commit/6230eaf0d0f9f4968558c434bbc99459008049e8)
 
 The above patch is for rtems-docs event recording section. This contains the example and steps to convert the trace from RTEMS target into LTTng format.
