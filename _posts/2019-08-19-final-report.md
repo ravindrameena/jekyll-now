@@ -42,7 +42,7 @@ The goal of this project is to enable the Trace Compass to analyze and display s
 information using Event Recording infrastructure. Trace Compass is a software for viewing and 
 analyzing any type of logs or traces. The basic information to analyze and display information 
 include CPU usage, IRQ analysis(IRQ Statistics, IRQ Table, IRQ vs Count, IRQ vs Time), Linux Kernel
-(Control Flow, Resources) etc. Linux Kernel trace graph view in Trace Compass depends on
+(Control Flow, Resources) etc. Linux Kernel trace graph view in Trace Compass depends on the
 sched_switch event of LTTng metadata which is used with RTEMS target trace to view the trace 
 graph.
 
@@ -102,7 +102,7 @@ from RTEMS target.
 
 **3.)** Modified rtems-record-lttng tool program to produce trace from RTEMS target which is compatible with LTTng metadata. 
 
-**4.)** Added LTTng sched_switch event in both rtems-record-lttng tool and LTTng metadata. This event helps in visualization of CPU usage and resources in Trace Compass.
+**4.)** Added LTTng sched_switch event in both rtems-record-lttng tool and LTTng metadata. This event helps in visualization of CPU usage and resources in the Trace Compass.
 
 **Main Outcome of Phase 2:** The rtems-record-lttng tool program now has support to read from a file if –input= command-line option is given. Earlier only babeltrace was able to read the event stream but now 
 Trace Compass can also read event stream values. The Trace Compass can also display the CPU Usage 
@@ -110,9 +110,9 @@ and resources.
 
 ## During GSoC Phase 3:
 
-**1.)** Stored thread id and thread name in a table so that the table can be used later in the LTTng sched_switch event. With the help of the table, the thread's can have a name.
+**1.)** Stored thread id and thread name in a table so that the table can be used later in the LTTng sched_switch event. With the help of the table, the threads can have a name.
 
-**2.)** Populated the thread id and thread name table to LTTng sched_switch event in the rtems-record-lttng tool so that thread's can have the name. 
+**2.)** Populated the thread id and thread name table to LTTng sched_switch event in the rtems-record-lttng tool so that threads can have the name. 
 
 **3.)** Generated metadata from the rtems-record-lttng tool.
 
