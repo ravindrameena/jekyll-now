@@ -119,7 +119,7 @@ and resources.
 **Main Outcome of Phase 3:** The Trace Compass can now display the thread state (IDLE/RUNNING) 
 and thread names. The rtems-record-lttng tool program can now generate LTTng metadata.
 
-## Trace Compass Trace Visualization snapshot:
+## Trace Compass trace visualization snapshot:
 
 ![_config.yml]({{ https://rmeena840.github.io/ }}/images/Trace-Compass.png)
 
