@@ -52,6 +52,8 @@ graph.
 ravindra-rtems), 
 [rtems-docs](https://github.com/rmeena840/rtems-docs/commits/master)
 
+The above branches on GitHub are the progress of the GSoC project from phase 1 to phase 3.
+
 # GSoC project main Objective:
 
 There are three main objectives of the project:
