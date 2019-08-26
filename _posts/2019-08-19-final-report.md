@@ -48,7 +48,7 @@ graph.
 
 **RTEMS wiki of GSoC project:** [wiki](https://devel.rtems.org/wiki/GSoC/2019/Basic_Support_for_Trace_Compass)
 
-**Develooment branch on GitHub:** [rtems-tools](https://github.com/rmeena840/rtems-tools/commits/
+**Development branch on GitHub:** [rtems-tools](https://github.com/rmeena840/rtems-tools/commits/
 ravindra-rtems), 
 [rtems-docs](https://github.com/rmeena840/rtems-docs/commits/master)
 
@@ -110,11 +110,14 @@ and resources.
 
 ## During GSoC Phase 3:
 
-**1.)** Stored thread id and thread name in a table so that the table can be used later in the LTTng sched_switch event. With the help of the table, the threads can have a name.
+**1.)** Stored thread id and thread name in a table so that the table can be used later in the LTTng sched_switch event. This table helps in retrieving the name of thread.
 
 **2.)** Populated the thread id and thread name table to LTTng sched_switch event in the rtems-record-lttng tool so that threads can have the name. 
 
-**3.)** Generated metadata from the rtems-record-lttng tool.
+**3.)** Thread state (IDLE/RUNNING) support for thread was added. This helps in figuring out the
+state (IDLE/RUNNING) of thread.
+
+**4.)** Generated metadata from the rtems-record-lttng tool.
 
 **Main Outcome of Phase 3:** The Trace Compass can now display the thread state (IDLE/RUNNING) 
 and thread names. The rtems-record-lttng tool program can now generate LTTng metadata.
@@ -133,7 +136,7 @@ The above snapshot shows the CPU usage and resource graph with thread names.
 ## Code contribution:
 [LTTng sched_switch support patch](https://git.rtems.org/rtems-tools/commit/?id=ba6b8af8bbd0120d0c4d77de54f2eb909a6081ea)
 
-The above patch is for LTTng sched_switch support. This single patch comprises the work done phase 1/2/3. The patch got merged!
+The above patch is for LTTng sched_switch support. This single patch comprises the work done in phase 1/2/3. The patch got merged!
 
 ## Documentation contribution:
 [LTTng sched_switch support documentation patch](https://github.com/rmeena840/rtems-docs/commit/b9dc8950b4b41bed08481e9d848f6ac2ca778c51)
