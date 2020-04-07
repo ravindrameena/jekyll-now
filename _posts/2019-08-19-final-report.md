@@ -164,3 +164,11 @@ and support.  Special thanks to LTTng community for their wonderful reviews and 
 
 Altogether, this was a great experience and I will remain an active contributor for the foreseeable 
 future. Happy coding!
+
+# Subscribe to my YouTube Channel
+
+[How to crack Google Summer of Code?](https://youtu.be/yioENzLk0Mo)
+
+[How to write impressive GSoC proposal?](https://youtu.be/j0OpHshFHOM)
+
+[How to approach open source organization for GSoC?](https://youtu.be/eMT5iQtazyM)
